@@ -34,23 +34,23 @@
 
                         <ul class="flex items-center space-x-8">
                             <li>
+                                <a href="#About" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                    About Me
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#Education" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
                                     Education
                                 </a>
                             </li>
                             <li>
-                                <a href="#About" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
-                                    Education
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                <a href="#Projects" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
                                     My Projects
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
-                                    About Me
+                                <a href="#Contact" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                    Contect
                                 </a>
                             </li>
                         </ul>
@@ -86,7 +86,7 @@
 
     </header>
 
-    <section id="About" class="text-center px-8 my-10">
+    <section id="About" class="text-center px-8 py-20">
 
         <h2 class="font-extrabold text-3xl sm:text-5xl dark:text-white scroll-fade-in">
             About Me
@@ -167,10 +167,6 @@
 
                     // Add the fadeIn class:
                     entry.target.classList.add("motion-safe:animate-fadeIn");
-                } else {
-
-                    // Otherwise remove the fadein class
-                    entry.target.classList.remove("motion-safe:animate-fadeIn");
                 }
             });
         };
