@@ -14,53 +14,88 @@
 
 </head>
 
-<body class="space-y-20 dark:bg-gradient-to-tr dark:from-slate-800 dark:via-purple-700 dark:to-slate-800 text-white h-max">
+<body class="space-y-20 dark:bg-purple-900 text-white h-max">
 
-    <header class="px-4 sm:px-6 md:px-16">
+    <header class="dark:bg-gradient-to-tr dark:from-slate-800 dark:via-purple-700 dark:to-slate-800">
 
-        <div class="relative pt-6 lg:pt-8 flex items-center justify-between
-        font-semibold text-sm leading-6">
+        <div class="relative py-4
+        px-4 sm:px-6 md:px-16 flex items-center justify-between font-semibold text-sm leading-6 dark:bg-gradient-to-r dark:from-pink-900 dark:via-pink-700 dark:to-pink-900 md:bg-inherit">
 
             <a href="#" class="text-4xl md:text-2xl font-bold text-pink-200 ease-in duration-300 hover:text-pink-400 w-40 text-center">
                 Catalina Sarria
                 <i class="fa-solid fa-atom"></i>
             </a>
 
-            <div class="flex items-center">
+            <div class="flex items-end md:hidden">
 
-                <div class="hidden md:flex items-center">
+                <button id="menu-button" type="button"
+                    class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-gray-500 hover:text-white menu-btn"
+                    aria-controls="mobile-menu" aria-expanded="false">
 
-                    <nav>
+                    <i id="menu-closed" class="block menu-btn text-3xl fa-solid fa-bars" aria-hidden="true"></i>
+                    <i id="menu-opened" class="hidden menu-btn text-3xl fa-solid fa-square-minus" aria-hidden="true"></i>
 
-                        <ul class="flex items-center space-x-8">
-                            <li>
-                                <a href="#About" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
-                                    About Me
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Education" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
-                                    Education
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Projects" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
-                                    My Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Contact" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
-                                    Contect
-                                </a>
-                            </li>
-                        </ul>
-
-                    </nav>
-
-                </div>
+                </button>
 
             </div>
 
+            <div class="hidden md:flex items-center">
+
+                <nav>
+
+                    <ul class="flex items-center space-x-8">
+                        <li>
+                            <a href="#About" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Experience" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                Experience
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Projects" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                My Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Contact" class="ease-in duration-300 border-b-4 border-transparent hover:border-pink-500">
+                                Contact Me!
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div class="hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3 dark:bg-pink-800">
+
+                <a href="#About"
+                    class="text-gray-300 hover:bg-pink-300 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+                    About Me
+                </a>
+
+                <a href="#Experience"
+                    class="text-gray-300 hover:bg-pink-300 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+                    Experience
+                </a>
+
+                <a href="#Projects"
+                    class="text-gray-300 hover:bg-pink-300 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+                    My Projects
+                </a>
+
+                <a href="#Contact"
+                    class="text-gray-300 hover:bg-pink-300 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+                    Contact Me!
+                </a>
+
+            </div>
         </div>
 
         <div class="relative max-w-5xl mx-auto pt-32 sm:pt-14 lg:pt-22">
@@ -86,7 +121,7 @@
 
     </header>
 
-    <section id="About" class="text-center px-8 py-20">
+    <section id="About" class="dark:bg-purple-900 text-center px-8 py-5">
 
         <h2 class="font-extrabold text-3xl sm:text-5xl dark:text-white scroll-fade-in">
             About Me
@@ -98,7 +133,7 @@
                 <img class="w-30 h-auto md:w-80 md:h-auto md:rounded-lg rounded-none mx-auto" src="/assets/about.jpg" alt="" width="384" height="512">
             </div>
 
-            <div class="relative row-start-1 col-start-7 xl:col-start-6 col-span-5 xl:col-span-6 rounded-xl dark:bg-purple-800 p-10">
+            <div class="relative row-start-1 col-start-7 xl:col-start-6 col-span-5 xl:col-span-6 rounded-xl dark:bg-violet-600 p-10">
 
                 <p class="text-left mb-4">
                     Hi! My name is Catalina Sarria, I love to understand how
@@ -231,7 +266,49 @@
         });
 
     </script>
+
+    <script>
+
+        function close_menu() {
+
+            $("#menu-closed").addClass("block").removeClass("hidden");
+            $("#menu-opened").addClass("hidden").removeClass("block");
+
+            $("#mobile-menu").slideUp(600, function() {
+                $("#mobile-menu").addClass("hidden").removeClass("block");
+            });
+
+        }
+
+        $("#menu-button").on("click", function () {
+
+
+            if ($("#menu-closed").hasClass("block")) {
+
+                $("#menu-closed").addClass("hidden").removeClass("block");
+                $("#menu-opened").addClass("block").removeClass("hidden");
+
+                $("#mobile-menu").slideDown(600);
+
+                $("#mobile-menu").addClass("block").removeClass("hidden");
+
+            } else {
+
+                close_menu();
+
+            }
+
         });
+
+        window.onscroll = function(event) {
+            close_menu();
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches(".menu-btn")) {
+                close_menu();
+            }
+        }
 
     </script>
 
