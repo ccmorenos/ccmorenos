@@ -156,10 +156,10 @@
 
     <script>
         // Get all the elements you want to show on scroll
-        const targets = document.querySelectorAll(".scroll-fade-in");
+        const fadeTargets = document.querySelectorAll(".scroll-fade-in");
 
         // Callback for IntersectionObserver
-        const callback = function (entries) {
+        const fadeCallback = function (entries) {
             entries.forEach(entry => {
 
                 // Is the element in the viewport?
@@ -168,19 +168,69 @@
                     // Add the fadeIn class:
                     entry.target.classList.add("motion-safe:animate-fadeIn");
                 }
+
             });
         };
 
         // Set up a new observer
-        const observer = new IntersectionObserver(callback);
+        const fadeObserver = new IntersectionObserver(fadeCallback);
 
         // Loop through each of the target
-        targets.forEach(function (target) {
+        fadeTargets.forEach(function (target) {
             // Hide the element
             target.classList.add("opacity-0");
 
             // Add the element to the watcher
-            observer.observe(target);
+            fadeObserver.observe(target);
+        });
+
+    </script>
+
+    <script>
+        // Get all the elements you want to show on scroll
+        const moveTargets = document.querySelectorAll(".scroll-move-in");
+
+        // Callback for IntersectionObserver
+        const moveCallback = function (entries) {
+            entries.forEach(entry => {
+
+                // Is the element in the viewport?
+                if (entry.isIntersecting) {
+
+                    if (entry.target.classList.contains("Ri")) {
+
+                        moveInClass = "motion-safe:animate-moveRi"
+
+                    } else if (entry.target.classList.contains("Le")) {
+
+                        moveInClass = "motion-safe:animate-moveLe"
+
+                    } else if (entry.target.classList.contains("Up")) {
+
+                        moveInClass = "motion-safe:animate-moveUp"
+
+                    }
+
+                    // Add the fadeIn class:
+                    entry.target.classList.add(moveInClass);
+
+                }
+
+            });
+        };
+
+        // Set up a new observer
+        const moveObserver = new IntersectionObserver(moveCallback);
+
+        // Loop through each of the target
+        moveTargets.forEach(function (target) {
+
+            // Add the element to the watcher
+            moveObserver.observe(target);
+
+        });
+
+    </script>
         });
 
     </script>
