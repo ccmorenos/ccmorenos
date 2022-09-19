@@ -36,6 +36,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y nodejs npm
+          npm install -D tailwindcss
+          npm install -D @tailwindcss/forms
           npx tailwindcss -i ./build.css -o ./css/style.css
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
