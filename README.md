@@ -71,6 +71,5 @@ GitHubStats](https://github-readme-stats.vercel.app/api?username=ccmorenos&show_
 [![GitHub
 Streak](https://github-readme-streak-stats.herokuapp.com?user=ccmorenos&&stroke=F5A9B8&background=1c1917&ring=5BCEFA&fire=F5A9B8&currStreakNum=ffffff&currStreakLabel=5BCEFA&sideNums=ffffff&sideLabels=5BCEFA&dates=F5A9B8&)](https://github.com/ccmorenos)
 
-
 [![GitHub Commits
-Graph](https://activity-graph.herokuapp.com/graph?username=ccmorenos&bg_color=1c1917&color=ffffff&line=F5A9B8&point=5BCEFA&area_color=F5A9B8&area=true&custom_title=GitHub%20Commits%20Graph)](https://github.com/ccmorenos)
+Graph](https://github-readme-activity-graph.cyclic.app/graph?username=ccmorenos&bg_color=1c1917&color=ffffff&line=F5A9B8&point=5BCEFA&area_color=F5A9B8&area=true&custom_title=GitHub%20Commits%20Graph)](https://github.com/ccmorenos)
