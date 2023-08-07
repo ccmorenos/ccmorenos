@@ -10,6 +10,20 @@ module.exports = {
                 moveLe: "moveLe 1s ease-in forwards",
                 moveUp: "moveUp 0.7s ease-in forwards"
             },
+            colors: {
+                trans: {
+                    1: "#5BCEFA",
+                    2: "#F5A9B8",
+                    3: "#FFFFFF"
+                },
+                lesbian: {
+                    1: "#D52D00",
+                    2: "#FF9A56",
+                    3: "#FFFFFF",
+                    4: "#D162A4",
+                    5: "#A30262"
+                }
+            },
             keyframes: {
                 fadeIn: {
                     "0%": { opacity: 0 },
