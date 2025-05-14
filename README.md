@@ -7,7 +7,7 @@ in data analysis, web development and sensors automatization.
 
 You can check my [principal account](https://github.com/ccmorenosa) for more!
 
-Know more about me in my [portfolio](https://ccmorenos.github.io/ccmorenos/).
+Know more about me in my [portfolio](https://ccmorenos.github.io/portfolio/).
 
 ## :trophy: GitHub Profile Trophies
 
